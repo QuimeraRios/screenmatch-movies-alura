@@ -5,12 +5,15 @@ public class Loops {
         Scanner teclado = new Scanner(System.in);
         double nota=0;
         double mediaDeEvaluaciones=0;
+        int contador=0;
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Escribe la nota que le darias a la pelicula Matrix? ");
+        while (contador < 3) {
+            System.out.println("Escribe la nota que le darías a la película Matrix: ");
             nota = teclado.nextDouble();
-            mediaDeEvaluaciones = mediaDeEvaluaciones + nota;
+            mediaDeEvaluaciones += nota;
+            contador++;
         }
-        System.out.println("la media de evaluaciones para Matrix es "+ mediaDeEvaluaciones/3);
+
+        System.out.println("La media de evaluaciones para Matrix es " + (mediaDeEvaluaciones / 3));
     }
 }
